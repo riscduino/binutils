@@ -2320,6 +2320,11 @@
 #define MASK_WRS_NTO 0xffffffff
 #define MATCH_WRS_STO 0x01d00073
 #define MASK_WRS_STO 0xffffffff
+
+/*Riscduino Mod instruction */
+#define MATCH_MOD 0x200000b
+#define MASK_MOD 0xfe00707f
+
 /* Vendor-specific (CORE-V) Xcvmac instructions.  */
 #define MATCH_CV_MAC       0x9000302b
 #define MASK_CV_MAC        0xfe00707f
@@ -4037,6 +4042,8 @@ DECLARE_INSN(th_sync_s, MATCH_TH_SYNC_S, MASK_TH_SYNC_S)
 /* XVentanaCondOps instructions. */
 DECLARE_INSN(vt_maskc, MATCH_VT_MASKC, MASK_VT_MASKC)
 DECLARE_INSN(vt_maskcn, MATCH_VT_MASKCN, MASK_VT_MASKCN)
+/*Riscduino Mod instruction */
+DECLARE_INSN(mod, MATCH_MOD, MASK_MOD)
 #endif /* DECLARE_INSN */
 #ifdef DECLARE_CSR
 /* Unprivileged Counter/Timers CSRs.  */

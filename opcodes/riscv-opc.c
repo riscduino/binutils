@@ -675,6 +675,9 @@ const struct riscv_opcode riscv_opcodes[] =
 {"remw",      64, INSN_CLASS_M,     "d,s,t",     MATCH_REMW, MASK_REMW, match_opcode, 0 },
 {"remuw",     64, INSN_CLASS_M,     "d,s,t",     MATCH_REMUW, MASK_REMUW, match_opcode, 0 },
 
+/** Riscduino Mod Instruction : --name, xlen, isa, operands, match, mask, match_func, pinfo. */
+{"mod",         0, INSN_CLASS_I, "d,s,t",     MATCH_MOD, MASK_MOD,match_opcode,0},
+
 /* Half-precision floating-point instruction subset.  */
 {"flh",        0, INSN_CLASS_ZFHMIN,   "D,o(s)",    MATCH_FLH, MASK_FLH, match_opcode, INSN_DREF|INSN_2_BYTE },
 {"flh",        0, INSN_CLASS_ZFHMIN,   "D,A,s",     0, (int) M_FLx, match_rs1_nonzero, INSN_MACRO },
